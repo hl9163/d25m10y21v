@@ -11,12 +11,12 @@ import android.widget.TextView;
 public class CustomAdapter extends BaseAdapter {
     Context context;
     String[] countryList;
-    String cityList[];
-    int symbols[];
+    String[] cityList;
+    int[] symbols;
     LayoutInflater inflter;
 
     public CustomAdapter(Context applicationContext, String[] countryList, String[] cityList, int[] symbols) {
-        this.context = context;
+        this.context = applicationContext;
         this.countryList = countryList;
         this.cityList = cityList;
         this.symbols = symbols;
@@ -42,7 +42,7 @@ public class CustomAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = inflter.inflate(R.layout.coustom_spinner, null);
         TextView country = (TextView) view.findViewById(R.id.textViews1);
-        TextView city = (TextView) view.findViewById(R.id.textViews1);
+        TextView city = (TextView) view.findViewById(R.id.textViews2);
         ImageView symbol = (ImageView) view.findViewById(R.id.imageView1);
         country.setText(countryList[i]);
         city.setText(cityList[i]);
