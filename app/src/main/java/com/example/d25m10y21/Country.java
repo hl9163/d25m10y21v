@@ -27,8 +27,8 @@ public class Country {
         return mainSong;
     }
 
-    public int getPopulation() {
-        return population;
+    public String getPopulation() {
+        return String.valueOf(population);
     }
 
     public String getLang() {
